@@ -8,6 +8,6 @@ fn main() {
     let home_dir_str = home_dir.to_str();
 
     std::io::stdout()
-        .write(tico::tico(&path, home_dir_str).as_bytes())
+        .write_all(tico::tico(&path, home_dir_str).as_bytes())
         .unwrap();
 }

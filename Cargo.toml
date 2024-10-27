@@ -8,10 +8,17 @@ homepage = "https://github.com/portocodes/tico"
 repository = "https://github.com/portocodes/tico"
 readme = "README.md"
 license = "MIT"
+edition = "2021"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+opt-level = 3
 
 [[bin]]
 name = "tico"
 doc = false
 
 [dependencies]
-dirs = "2.0.2"
+dirs = "5"
